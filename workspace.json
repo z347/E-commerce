@@ -55,49 +55,11 @@
             "buildTarget": "front-end-client:build:production"
           }
         },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/front-end/client"
-          ],
-          "options": {
-            "jestConfig": "apps/front-end/client/jest.config.js",
-            "passWithNoTests": true
-          }
-        },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
               "apps/front-end/client/**/*.{ts,tsx,js,jsx}"
-            ]
-          }
-        }
-      }
-    },
-    "front-end/client-e2e": {
-      "root": "apps/front-end/client-e2e",
-      "sourceRoot": "apps/front-end/client-e2e/src",
-      "projectType": "application",
-      "targets": {
-        "e2e": {
-          "executor": "@nrwl/cypress:cypress",
-          "options": {
-            "cypressConfig": "apps/front-end/client-e2e/cypress.json",
-            "tsConfig": "apps/front-end/client-e2e/tsconfig.e2e.json",
-            "devServerTarget": "front-end/client:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "front-end/client:serve:production"
-            }
-          }
-        },
-        "lint": {
-          "executor": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "apps/front-end/client-e2e/**/*.{js,ts}"
             ]
           }
         }
@@ -147,16 +109,6 @@
             "lintFilePatterns": [
               "apps/back-end/api/**/*.ts"
             ]
-          }
-        },
-        "test": {
-          "executor": "@nrwl/jest:jest",
-          "outputs": [
-            "coverage/apps/back-end/api"
-          ],
-          "options": {
-            "jestConfig": "apps/back-end/api/jest.config.js",
-            "passWithNoTests": true
           }
         }
       }
