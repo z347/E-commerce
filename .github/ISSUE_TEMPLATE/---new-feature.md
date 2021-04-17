@@ -1,5 +1,5 @@
 ---
-name: "⚙️ New feature"
+name: "\U0001F4A1 New feature"
 about: Завдання по поточному етапу розробки
 title: "[FEATURE]"
 labels: feature
