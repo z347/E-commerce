@@ -19,11 +19,11 @@
     }
   },
   "projects": {
-    "front-end-client": {
-      "tags": ["scope: front-end-client", "type: app"]
+    "client": {
+      "tags": ["scope:client", "type:app"]
     },
-    "back-end-api": {
-      "tags": ["scope: back-end-api", "type: app"]
+    "api": {
+      "tags": ["scope:api", "type:app"]
     }
   }
 }

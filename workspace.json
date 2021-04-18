@@ -3,7 +3,7 @@
   "cli": {
     "defaultCollection": "@nrwl/next"
   },
-  "defaultProject": "front-end-client",
+  "defaultProject": "client",
   "generators": {
     "@nrwl/react": {
       "application": {
@@ -18,7 +18,7 @@
     }
   },
   "projects": {
-    "front-end-client": {
+    "client": {
       "root": "apps/front-end/client",
       "sourceRoot": "apps/front-end/client",
       "projectType": "application",
@@ -37,14 +37,14 @@
         "serve": {
           "executor": "@nrwl/next:server",
           "options": {
-            "buildTarget": "front-end-client:build",
+            "buildTarget": "client:build",
             "dev": true,
             "port": 3000,
             "proxyConfig": "apps/front-end/client/proxy.conf.json"
           },
           "configurations": {
             "production": {
-              "buildTarget": "front-end-client:build:production",
+              "buildTarget": "client:build:production",
               "dev": false
             }
           }
@@ -52,7 +52,7 @@
         "export": {
           "executor": "@nrwl/next:export",
           "options": {
-            "buildTarget": "front-end-client:build:production"
+            "buildTarget": "client:build:production"
           }
         },
         "lint": {
@@ -63,7 +63,7 @@
         }
       }
     },
-    "back-end-api": {
+    "api": {
       "root": "apps/back-end/api",
       "sourceRoot": "apps\\back-end\\api\\src",
       "projectType": "application",
@@ -93,7 +93,7 @@
         "serve": {
           "executor": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "back-end-api:build",
+            "buildTarget": "api:build",
             "port": 3100
           }
         },
