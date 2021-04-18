@@ -40,8 +40,8 @@ module.exports = {
     },
     husky: {
       prepare: 'husky install',
-      pre_commit: 'npm run nps lint_staged'
-      // commit_msg: 'commitlint --edit --color'
+      pre_commit: 'npm run nps lint_staged',
+      commit_msg: 'commitlint --edit --color'
     },
     lint_staged: {
       default: npsUtils.concurrent.nps('format', 'git add')
