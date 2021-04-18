@@ -93,8 +93,7 @@
         "serve": {
           "executor": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "api:build",
-            "port": 3100
+            "buildTarget": "api:build"
           }
         },
         "lint": {

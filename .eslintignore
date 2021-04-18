@@ -10,8 +10,6 @@ node_modules
 dist
 
 ### not valid files
-*.js
+*.md
 *.svg
-*.md
 *.ico
-*.md

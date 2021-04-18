@@ -1,26 +1,18 @@
-## Getting Started in dev mode
-
-```bash
-npm run nps start.dev
-```
-
----
-
 ### ⚙️ Setup Husky v6
 
 **_Documentations_**:
 
 - [Husky](https://typicode.github.io/husky/#/)
 
-0. npm i husky lint-staged -D
-1. git init
-2. npx husky-init && npm install
-3. adding a custom hook [(available names)](https://git-scm.com/docs/githooks)
+1. npm i husky lint-staged -D
+2. npx husky-init
+3. git init (if not exist)
+4. adding a custom hook [(available names)](https://git-scm.com/docs/githooks)
 
 ```bash
 npx husky add .husky/<HOOK NAME> "<SCRIPTS TO RUN>"
 
-npx husky add .husky/pre-commit "npx lint-staged"
+npx husky add .husky/pre-commit "npm run nps lint_staged"
 
                           OR
 
@@ -143,7 +135,7 @@ npx husky add .husky/commit-msg "npm run nps husky.commit_msg"
 
 ```javascript
 husky: {
-  commit_msg: `commitlint --edit --color`
+  commit_msg: 'commitlint --edit --color'
 }
 ```
 
