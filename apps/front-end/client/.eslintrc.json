@@ -3,19 +3,47 @@
   "ignorePatterns": ["!**/*"],
   "overrides": [
     {
-      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
-      "parserOptions": {
-        "project": ["apps/front-end/client/tsconfig(.*)?.json"]
-      },
-      "rules": {}
-    },
-    {
       "files": ["*.ts", "*.tsx"],
-      "rules": {}
-    },
-    {
-      "files": ["*.js", "*.jsx"],
-      "rules": {}
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": ["apps/front-end/client/tsconfig.json"],
+        "ecmaVersion": 12,
+        "sourceType": "module",
+        "ecmaFeatures": {
+          "jsx": true
+        }
+      },
+      "settings": {
+        "react": {
+          "pragma": "react",
+          "version": "detect"
+        }
+      },
+      "plugins": ["react", "@typescript-eslint", "promise", "sonarjs", "prettier"],
+      "extends": [
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:promise/recommended",
+        "plugin:sonarjs/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings",
+        "plugin:import/typescript",
+        "airbnb-typescript",
+        "prettier"
+      ],
+      "rules": {
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": [
+          "error",
+          {
+            "extensions": [".tsx"]
+          }
+        ],
+        "prettier/prettier": "error",
+        "react/jsx-props-no-spreading": "off"
+      }
     }
   ]
 }

@@ -1,0 +1,26 @@
+### Read more: https://git-scm.com/docs/gitattributes
+
+
+###
+.husky linguist-generated
+
+
+### configuration files
+.browserslistrc linguist-generated
+.commitlintrc.json linguist-generated
+.editorconfig linguist-generated
+.eslintignore linguist-generated
+.eslintrc linguist-generated
+.prettierignore linguist-generated
+.prettierrc linguist-generated
+.gitattributes linguist-generated
+.gitignore linguist-generated
+.stylelintrc linguist-generated
+commitizen.config.js linguist-generated
+package-scripts.js linguist-generated
+
+
+### not important files
+yarn.lock linguist-generated
+INSTRUCTIONS.md linguist-generated
+README.md linguist-generated

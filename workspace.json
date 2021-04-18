@@ -25,9 +25,7 @@
       "targets": {
         "build": {
           "executor": "@nrwl/next:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "root": "apps/front-end/client",
             "outputPath": "dist/apps/front-end/client"
@@ -40,7 +38,9 @@
           "executor": "@nrwl/next:server",
           "options": {
             "buildTarget": "front-end-client:build",
-            "dev": true
+            "dev": true,
+            "port": 3000,
+            "proxyConfig": "apps/front-end/client/proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -58,9 +58,7 @@
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/front-end/client/**/*.{ts,tsx,js,jsx}"
-            ]
+            "lintFilePatterns": ["apps/front-end/client/**/*.{ts,tsx,js,jsx}"]
           }
         }
       }
@@ -72,16 +70,11 @@
       "targets": {
         "build": {
           "executor": "@nrwl/node:build",
-          "outputs": [
-            "{options.outputPath}"
-          ],
+          "outputs": ["{options.outputPath}"],
           "options": {
             "outputPath": "dist/apps/back-end/api",
             "main": "apps/back-end/api/src/main.ts",
-            "tsConfig": "apps/back-end/api/tsconfig.app.json",
-            "assets": [
-              "apps/back-end/api/src/assets"
-            ]
+            "tsConfig": "apps/back-end/api/tsconfig.app.json"
           },
           "configurations": {
             "production": {
@@ -100,15 +93,14 @@
         "serve": {
           "executor": "@nrwl/node:execute",
           "options": {
-            "buildTarget": "back-end-api:build"
+            "buildTarget": "back-end-api:build",
+            "port": 3100
           }
         },
         "lint": {
           "executor": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": [
-              "apps/back-end/api/**/*.ts"
-            ]
+            "lintFilePatterns": ["apps/back-end/api/**/*.ts"]
           }
         }
       }

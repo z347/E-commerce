@@ -1,18 +1,29 @@
 {
   "implicitDependencies": {
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     ".eslintrc.json": "*"
   },
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "npmScope": "e-commerce",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint"] }
+      "options": {
+        "cacheableOperations": ["build", "lint"]
+      }
     }
   },
   "projects": {
-    "front-end-client": { "tags": [] },
-    "back-end-api": { "tags": [] }
+    "front-end-client": {
+      "tags": ["scope: front-end-client", "type: app"]
+    },
+    "back-end-api": {
+      "tags": ["scope: back-end-api", "type: app"]
+    }
   }
 }

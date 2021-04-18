@@ -13,8 +13,12 @@
             "allow": [],
             "depConstraints": [
               {
-                "sourceTag": "*",
-                "onlyDependOnLibsWithTags": ["*"]
+                "sourceTag": "scope: front-end-client",
+                "onlyDependOnLibsWithTags": ["scope: front-end-client"]
+              },
+              {
+                "sourceTag": "scope: back-end-api",
+                "onlyDependOnLibsWithTags": ["scope: back-end-api"]
               }
             ]
           }

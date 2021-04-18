@@ -1,16 +1,17 @@
-### Add files here to ignore them from prettier formatting
-
-
 ### work environment files
-.eslintcache
 next-env.d.ts
 package-lock.json
 
 ### work environment folders
-dist
-coverage
 .idea
 .vscode
-.next
 .husky
 node_modules
+dist
+
+### not valid files
+*.js
+*.svg
+*.md
+*.ico
+*.md
