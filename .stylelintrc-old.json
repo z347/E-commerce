@@ -1,0 +1,16 @@
+{
+  "processors": ["stylelint-processor-styled-components"],
+  "plugins": ["stylelint-order", "stylelint-scss"],
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order",
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components",
+    "stylelint-prettier/recommended"
+  ],
+  "rules": {
+    "at-rule-empty-line-before": "always",
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": true
+  }
+}

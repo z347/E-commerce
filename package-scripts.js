@@ -34,9 +34,13 @@ module.exports = {
       default: 'nx format:write',
       check: 'nx format:check'
     },
-    lint: {
-      default: '',
-      css: ''
+    // lint: {
+    //   default: '',
+    //   css: ''
+    // },
+    style: {
+      check: 'stylelint ./apps/front-end/**/*.{ts,tsx,scss} --color',
+      fix: 'stylelint ./apps/front-end/**/*.{ts,tsx,scss} --color --fix'
     },
     husky: {
       prepare: 'husky install',

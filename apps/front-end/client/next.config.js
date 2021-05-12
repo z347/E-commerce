@@ -1,5 +1,6 @@
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const withNx = require('@nrwl/next/plugins/with-nx')
+const path = require('path')
 
 const developmentConfig = require('./webpack.config')
 
@@ -21,10 +22,13 @@ module.exports = withNx({
     webpack5: false
   },
   webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // console.log(config);
-
-    if (dev) config.plugins.push(...developmentConfig)
+    // if (dev) config.plugins.push(...developmentConfig)
 
     return config
+  },
+
+
+  sassOptions: {
+    includePaths: [path.join(__dirname, 'styles')]
   }
 })

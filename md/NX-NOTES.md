@@ -56,9 +56,9 @@ nx g @nrwl/nest:app api
 1. run one app
 
 ```bash
-LOGIC:      nx r <project name>:serve
+LOGIC:      nx r <project name>:serve   ||    nx serve <project name>
 
-EXAMPLE:    nx r client:serve
+EXAMPLE:    nx r client:serve           ||    nx serve client
 ```
 
 2. prettier

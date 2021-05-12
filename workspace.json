@@ -39,7 +39,7 @@
           "options": {
             "buildTarget": "client:build",
             "dev": true,
-            "port": 3000,
+            "port": 3100,
             "proxyConfig": "apps/front-end/client/proxy.conf.json"
           },
           "configurations": {
