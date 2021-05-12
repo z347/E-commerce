@@ -4,7 +4,6 @@ import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '@components/vendors/container'
 import { LeftBlock } from './containers/Left.block'
 
-
 const useStyles = makeStyles((theme) => ({
   container: {
     display: 'flex',
@@ -26,7 +25,6 @@ const HomePage: FC = () => {
   return (
     <Container component="section" className={container}>
       <LeftBlock />
-
     </Container>
   )
 }

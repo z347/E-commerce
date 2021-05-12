@@ -27,7 +27,6 @@ module.exports = withNx({
     return config
   },
 
-
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')]
   }

@@ -25,7 +25,7 @@
       "@themes/*": ["themes/*"],
       "@assets/*": ["assets/*"],
       "@styles/*": ["styles/*"],
-      "@data/*": ["data/*"],
+      "@data/*": ["data/*"]
     }
   },
   "include": ["**/*.ts", "**/*.tsx", "**/*.js", "**/*.jsx", "next-env.d.ts"],
